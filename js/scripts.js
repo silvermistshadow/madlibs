@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     $(".person1").text(person1Input);
     $(".verb").text(verbInput);
-    $(".acterb").text(actverbInput);
+    $(".actverb").text(actverbInput);
     $(".noun").text(nounInput);
 
     $("#story").show();
