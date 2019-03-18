@@ -1,18 +1,16 @@
 $(document).ready(function(){
   $("#formOne").submit(function(event){
-    var person1Input = $("input#person1").val();
-    var verbInput = $("input#verb").val();
-    var actverbInput = $("input#actverb").val();
-    var nounInput = $("input#noun").val();
+    event.preventDefault();
+    var blanks = ["person1", "verb", "actverb", "noun"];
 
-    $(".person1").text(person1Input);
-    $(".verb").text(verbInput);
-    $(".actverb").text(actverbInput);
-    $(".noun").text(nounInput);
+    blanks.forEach(function(blank) {
+      var userInput = $("input#" + blank).val();
+      $("." + blank).text(userInput);
+    });
 
     $("#story").show();
 
-    event.preventDefault();
+
 
   });
 
